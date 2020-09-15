@@ -5,18 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Applications\Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\EnesKartalApi\EnesKartalApi.csproj" />
-  </ItemGroup>
-
 
 
 </Project>
