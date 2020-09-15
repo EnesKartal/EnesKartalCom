@@ -1,11 +1,43 @@
 ﻿@{
     ViewData["Title"] = "Anasayfa";
 }
-
-@section Scripts{
+<head>
+    <title>Enes Kartal | Kişisel Web Sitesi</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Enes Kartal" />
+    <meta name="author" content="Enes Kartal" />
+    <meta name="keywords" content="Enes Kartal" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/Assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="~/Assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    @*<partial name="_CookieConsentPartial" />*@
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+            <header id="header">
+                <h1>Enes Kartal</h1>
+                <p>Yazılım Uzmanı</p>
+                <nav>
+                    <ul>
+                        <li><a target="_blank" href="https://www.facebook.com/deagle17" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                        <li><a target="_blank" href="http://github.com/EnesKartal" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                        <li><a target="_blank" href="mailto://enes@eneskartal.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/eneskartal" class="icon solid fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                        <li><a target="_blank" href="#" class="icon solid fa-app-store"><span class="label">Uygulamalar</span></a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <footer id="footer">
+        <span class="copyright">&copy; Enes Kartal. Copyright @DateTime.Now.Year.</span>
+    </footer>
     <script>
         window.onload = function () { document.body.classList.remove('is-preload'); }
         window.ontouchmove = function () { return false; }
         window.onorientationchange = function () { document.body.scrollTop = 0; }
     </script>
-}
+</body>
