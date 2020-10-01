@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EnesKartalApi.Data;
+using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace EnesKartalApi.Controllers
@@ -7,13 +9,16 @@ namespace EnesKartalApi.Controllers
     [Route("[controller]")]
     public class CopyDuplicatorController : Controller
     {
+        readonly EagleDbContext db;
+        public CopyDuplicatorController(EagleDbContext db)
+        {
+            this.db = db;
+        }
+
         [HttpGet]
         public List<string> CopyDuplicatorSerials(string key)
         {
-            if (key == "EagleCopyDuplicator17")
-                return new List<string>() { "Eagle" };
-            else
-                return new List<string>() { }; ;
+            return db.CopyDuplicatorLicence.Select(p=>p.Ip).ToList();
         }
     }
 }
